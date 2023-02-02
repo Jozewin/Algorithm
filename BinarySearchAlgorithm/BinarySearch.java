@@ -5,9 +5,8 @@ public class BinarySearch {
         int head = 0;
         int tail = nums.length-1;
         
-        if(nums[0]== target )   return 0;
         
-        while(head<tail){
+        while(head<=tail){
             int mid = (head + tail)/2;
             
             if(nums[mid]<target)   head = mid + 1;
