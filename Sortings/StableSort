@@ -1,0 +1,37 @@
+what is StableSort?
+    lets take a array with duplication and see
+
+    1) 90 43 23 2 5 2 ==> 2 2 5 23 43 90
+
+    here we can see a array with duplication
+    In a array sorting arent problem which number comes first doesn't matter
+
+    Lets see with a another question
+
+    2)Trains shedules
+
+    // Unsorted             // Time alone sorted
+    time and city               time and city
+    10 tuty                      1 Theni
+    5 coimbatore                 2 Chennai
+    2 chennai           ==>      5 Coimbatore
+    1 Theni                     10 Tuty
+    12 Chennai                  12 Chennai
+
+
+    // Again now Sorting by alphabets
+
+    12  Chennai
+     2  Chennai
+     5  Coimbatore
+     1  Theni
+    10  Tuty
+
+    In the above sorted table we can see that the order has changed
+    the 2'O clock chennai train should have came 1st
+    But instead of that the 12'O clock chennai train came 1st
+
+    This sorting is called UnstableSort
+
+    Stablesort cant be achieved by SelectionSort
+    but can be by other sorts
