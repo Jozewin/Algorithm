@@ -3,7 +3,7 @@ package Sortings;
 import java.util.Arrays;
 
 public class SelectionSort {
-    public static void ssSort(int[] arr){
+    public static void ascendingSort(int[] arr){
         /**
          * ==Ascending Order==
          * Time complexity = O(n^2)
@@ -11,7 +11,7 @@ public class SelectionSort {
         /**
          * Setting the outer loop which is used to compare
          */
-        for (int i = 0;i<arr.length-1;i++){
+            for (int i = 0;i<arr.length-1;i++){
             /**
              * Setting minIndex to compare inner loop
              */
@@ -19,7 +19,7 @@ public class SelectionSort {
             /**
              * Setting the Inner loop which will be used to compare with outer loop
              */
-            for(int j = i+1;j<arr.length;j++){
+            for(int j = i+1;j< arr.length;j++){
                 /**
                  * Condition operations when found j is smaller than i
                  */
@@ -36,9 +36,34 @@ public class SelectionSort {
         }
     }
 
+
+    public static void descedingSort(int[] arr){
+        /**
+         * Decending Oder Sort
+         * Time complexity => O(n^2)
+         */
+        for(int i = arr.length-1;i>=1;i--){
+            int minIndex = i ;
+            for(int j = i-1;j>=0;j--){
+                if(arr[j]<arr[minIndex]){
+                    minIndex = j;
+                }
+
+            }
+            int temp= arr[i];
+            arr[i]= arr[minIndex];
+            arr[minIndex]= temp;
+        }
+
+    }
+
     public static void main(String[] args) {
         int[] arr = new int[]{1,21,3,2,65,7,33};
-        ssSort(arr);
-        System.out.println(Arrays.toString(arr));
-    }
+        ascendingSort(arr);
+        System.out.println("Ascending Order :- "+Arrays.toString(arr));
+
+        int [] arrp = new int[]{12,43,5,3,8,23,9,2};
+        descedingSort(arrp);
+        System.out.println("\nDescending Oder :- "+Arrays.toString(arrp));
+     }
 }
